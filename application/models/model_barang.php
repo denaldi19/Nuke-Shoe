@@ -18,16 +18,25 @@ class model_barang extends CI_Model
         return $this->db->query('SELECT * FROM barang');
     }
 
-    public function update_barang($where, $data, $dest)
+    public function detail_barang($where, $table)
     {
-        $this->db->where($where);
-        $this->db->update($dest, $data);
+        return $this->db->get_where($table, $where);
     }
 
-    function delete_barang(){
-        return $this->db->query('SELECT * FROM barang');
+    public function update_barang($id,$data)
+    {
+
+        $this->db->query("UPDATE barang SET id_barang = $data[id_barang],nama_barang = '$data[nama_barang]',ukuran = $data[ukuran],id_merek = '$data[id_merek]',kuantitas = $data[kuantitas],harga_beli = $data[harga_beli],harga_jual = $data[harga_jual] WHERE id_barang=$id");
+    }
+
+    function delete_barang($id){
+
+        $this->db->query("DELETE FROM barang_keluar WHERE id_barang = $id");
+        $this->db->query("DELETE FROM barang_masuk WHERE id_barang = $id");
+        $this->db->query("DELETE FROM barang WHERE id_barang = $id");
 
     }
+
 
 }
 ?>

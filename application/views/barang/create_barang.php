@@ -13,6 +13,7 @@
                                 <input type="text" name="nama_barang"><br>
                                 <input type="text" name="ukuran"><br>
                                 <input type="text" name="id_merek"><br>
+                                <input type="text" name="id_warna"><br>
                                 <input type="text" name="kuantitas"><br>
                                 <input type="text" name="harga_beli"><br>
                                 <input type="text" name="harga_jual"><br>

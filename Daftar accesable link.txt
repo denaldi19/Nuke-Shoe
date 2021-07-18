@@ -3,8 +3,16 @@ base_url = https://localhost/Nuke-Shoe/
 https://localhost/Nuke-Shoe/user/Dashboard_user
 https://localhost/Nuke-Shoe/admin/Dashboard_admin
 
-http://localhost/Nuke-Shoe/Login
-https://localhost/Nuke-Shoe/Registrasi
+http://localhost/Nuke-Shoe/Login ok
+https://localhost/Nuke-Shoe/Registrasi ok
 
 https://localhost/Nuke-Shoe/Data_barang
 https://localhost/Nuke-Shoe/Data_user
+
+https://localhost/Nuke-Shoe/Data_barang/create_barang
+https://localhost/Nuke-Shoe/Data_barang/delete_barang/id
+https://localhost/Nuke-Shoe/Data_barang/detail_barang/id
+
+
+DELETE FROM barang_keluar WHERE id_barang IN (select id_barang from barang where id_merek = 1);
+
