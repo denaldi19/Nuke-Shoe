@@ -7,10 +7,10 @@ class model_barang extends CI_Model
         parent::__construct();
     }
 
-    // CRUD barang
-
+    // Query for CRUD barang
+    //Sementara menggunakan query builder milik CI
     function create_barang($data,$dest){
-        return $this->db->query('INSERT INTO $dest VALUES $data');
+        return $this->db->insert($dest,$data);
     }
     function read_barang()
 
@@ -18,11 +18,14 @@ class model_barang extends CI_Model
         return $this->db->query('SELECT * FROM barang');
     }
 
-    function update_barang(){
-
+    public function update_barang($where, $data, $dest)
+    {
+        $this->db->where($where);
+        $this->db->update($dest, $data);
     }
 
     function delete_barang(){
+        return $this->db->query('SELECT * FROM barang');
 
     }
 

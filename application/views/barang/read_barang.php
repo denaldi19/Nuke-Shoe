@@ -14,6 +14,9 @@ foreach ($barang as $brg) :
 echo $brg -> id_barang;
 endforeach;
 ?> 
+
+<a href="<?= base_url("Data_barang/create_barang")?>">Tambah barang</a>
+<a href="<?= base_url("Data_barang/create_barang")?>">Edit barang</a>
 </p>
 
 

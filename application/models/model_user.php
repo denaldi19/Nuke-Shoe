@@ -7,10 +7,26 @@ class model_user extends CI_Model
         parent::__construct();
     }
 
-    // CRUD user
+    // Query for CRUD user
+    //Sementara menggunakan query builder milik CI
 
-    function insert_user($data,$dest){
+    function create_user($data,$dest){
         return $this->db->insert($dest,$data);
+    }
+    function read_user()
+
+    {
+        return $this->db->query('SELECT * FROM admin');
+    }
+
+    function update_user(){
+        return $this->db->query('SELECT * FROM admin');
+
+    }
+
+    function delete_user(){
+        return $this->db->query('SELECT * FROM admin');
+
     }
 
 

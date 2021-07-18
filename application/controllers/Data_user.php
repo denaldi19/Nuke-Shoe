@@ -1,11 +1,21 @@
 <?php
-class Read_barang extends CI_Controller {
+//CRUD user
+class Data_user extends CI_Controller {
 
 	public function __construct()
     {
         parent::__construct();
         $this->load->library('form_validation');
         $this->load->library('session');
+
+		//Authorization
+
+		if($this->session->userdata('user') == NULL ){
+            redirect("login");
+        }
+        if($this->session->userdata('role') != 1){ 
+            redirect(base_url('user/Dashboard_user'));
+          }
 		
     }
 	public function index()
@@ -15,5 +25,4 @@ class Read_barang extends CI_Controller {
 		$this->load->view('Read_barang',$data);
 	}
 }
-
-	?>
+?>

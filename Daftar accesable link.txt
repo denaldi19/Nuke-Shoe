@@ -1,0 +1,10 @@
+base_url = https://localhost/Nuke-Shoe/
+
+https://localhost/Nuke-Shoe/user/Dashboard_user
+https://localhost/Nuke-Shoe/admin/Dashboard_admin
+
+http://localhost/Nuke-Shoe/Login
+https://localhost/Nuke-Shoe/Registrasi
+
+https://localhost/Nuke-Shoe/Data_barang
+https://localhost/Nuke-Shoe/Data_user
